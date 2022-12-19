@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Product Discovery</string>
+    <string name="search_product_hint">Nhập tên , mã sản phẩm</string>
+    <string name="product_name_example">Bộ xử lý/CPU i7 8 nhân mạnh nhất</string>
+    <string name="product_code">Mã SP:\u0020</string>
+    <string name="out_of_stock">Tạm hết hàng</string>
+    <string name="product_brand_hint">Thương hiệu</string>
+    <string name="product_warranty_hint">Bảo hành</string>
+    <string name="product_wattage">Công suất</string>
+    <string name="product_cache_hint">Bộ nhớ đệm</string>
+    <string name="describe_fragment_title">Mô tả sản phẩm</string>
+    <string name="technique_info_fragment_title">Thông số kỹ thuật</string>
+    <string name="compare_fragment_title">So sánh giá</string>
+    <string name="same_kind_product_hint">Sản phẩm cùng loại</string>
+    <string name="error_msg_no_internet">Không có kết nối mạng!!!</string>
+    <string name="error_msg_empty_database">Dữ liệu trống!!!</string>
+</resources>

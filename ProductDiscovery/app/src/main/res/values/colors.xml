@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EA341F</color>
+    <color name="colorPrimaryDark">#af0000</color>
+    <color name="colorAccent">#EA341F</color>
+    <color name="tomato">#EA341F</color>
+    <color name="darkGrey">#262829</color>
+    <color name="paleGrey">#eef1f3</color>
+    <color name="white">@android:color/white</color>
+    <color name="coolGrey">#8f8b98</color>
+    <color name="deepSkyBlue">#1e74f6</color>
+
+</resources>

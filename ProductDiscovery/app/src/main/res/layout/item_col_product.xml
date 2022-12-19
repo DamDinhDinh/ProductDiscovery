@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <import type="dd.dinh.productdiscovery.ui.utils.ProductConverts"/>
+        <variable
+            name="product"
+            type="dd.dinh.productdiscovery.data.model.Product" />
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            imageUrl="@{product.imageUrl}"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvInfoProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{product.name}"
+                android:textColor="@color/darkGrey"
+                android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+
+            <TextView
+                android:id="@+id/tvInfoProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{ProductConverts.getPrice(product.price)}"
+                android:textColor="@color/tomato"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInfoProductName" />
+
+            <TextView
+                android:id="@+id/tvInfoProductOriginalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="12.970.000"
+                android:textColor="@color/coolGrey"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/tvInfoProductPrice"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvInfoSalePercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/sale_percent_background"
+                android:padding="3dp"
+                android:text="-20%"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvInfoProductOriginalPrice"
+                app:layout_constraintStart_toEndOf="@id/tvInfoProductOriginalPrice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>
+

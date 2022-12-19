@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="dd.dinh.productdiscovery.ui.utils.ProductConverts"/>
+        <variable
+            name="product"
+            type="dd.dinh.productdiscovery.data.model.Product" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageButton
+            android:id="@+id/imgBtnNavBefore"
+            android:layout_margin="12dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_navigate_before"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/tvAppbarProductName"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="13sp"
+            android:layout_centerHorizontal="true"
+            android:text="@{product.name}"
+            android:textColor="@color/darkGrey"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scrollbarSize="13sp"
+            android:text="@{ProductConverts.getPrice(product.price)}"
+            android:textColor="@color/tomato"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/tvAppbarProductName"
+            android:layout_marginBottom="4dp"/>
+
+        <ImageButton
+            android:id="@+id/imgBtnCart"
+            android:layout_margin="12dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_cart"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</layout>

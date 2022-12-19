@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="dd.dinh.productdiscovery.ui.utils.ProductConverts"/>
+        <variable
+            name="product"
+            type="dd.dinh.productdiscovery.data.model.Product" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:padding="12dp">
+
+
+        <TextView
+            android:id="@+id/tvInfoProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{product.name}"
+            android:textColor="@color/darkGrey"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHintProductCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/product_code"
+            android:textColor="@color/coolGrey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoProductName" />
+
+        <TextView
+            android:id="@+id/tvInfoProductCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{product.code}"
+            android:textColor="@color/deepSkyBlue"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvHintProductCode"
+            app:layout_constraintStart_toEndOf="@id/tvHintProductCode" />
+
+        <TextView
+            android:id="@+id/tvInfoProductQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/product_quantity_background"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:text="@string/out_of_stock"
+            android:textColor="@color/coolGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoProductCode" />
+
+        <TextView
+            android:id="@+id/tvInfoProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{ProductConverts.getPrice(product.price)}"
+            android:textColor="@color/tomato"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInfoProductQuantity" />
+
+        <TextView
+            android:id="@+id/tvInfoProductOriginalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="12.970.000"
+            android:textColor="@color/coolGrey"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvInfoProductPrice"
+            app:layout_constraintStart_toEndOf="@id/tvInfoProductPrice" />
+
+        <TextView
+            android:id="@+id/tvInfoSalePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/sale_percent_background"
+            android:padding="3dp"
+            android:text="-20%"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvInfoProductOriginalPrice"
+            app:layout_constraintStart_toEndOf="@id/tvInfoProductOriginalPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
