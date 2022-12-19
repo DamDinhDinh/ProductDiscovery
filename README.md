@@ -1,5 +1,5 @@
 # ProductDiscovery
-This is Teko's entry test which I attempted in 2019
+This is Teko's entry test which I attempted in October 2020
 It fetchs product data from API then show in list, click then show detail page with info and specs tab, with an addidtion relate product list.
 
 ![2022-12-19 23 33 02](https://user-images.githubusercontent.com/25581547/208474384-fdbb1f50-370d-4f26-9cce-7d973e26aafc.jpg)
